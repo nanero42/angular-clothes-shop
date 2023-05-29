@@ -1,0 +1,30 @@
+<div class="auth__container">
+  <div class="auth__container-title-and-form">
+    <h1 class="auth__title">{{ isSignup$.value ? 'Sign Up' : 'Sign In' }}</h1>
+    <form class="auth__form">
+      <div *ngIf="isSignup$.value" class="auth__form-group">
+        <input class="auth__form-control" type="text" name="name" required>
+        <label class="auth__form-label" for="name">
+          <span class="auth__form-label-text">Name</span>
+        </label>
+      </div>
+      <div class="auth__form-group">
+        <input class="auth__form-control" type="email" name="email" required>
+        <label class="auth__form-label" for="email">E-Mail</label>
+      </div>
+      <div class="auth__form-group">
+        <input class="auth__form-control" type="password" name="password" required>
+        <label class="auth__form-label" for="password">Password</label>
+      </div>
+      <app-button
+        [text]="isSignup$.value ? 'Already have an account?' : 'Forgot your password?'"
+        [category]="eButton.text"
+        [buttonJustifyContent]="eJustifyContent['flex-end']"
+        [icon]="eIcon.arrowRight"
+        margin="0 0 34px 0" (click)="click()"
+      />
+      <app-button type="submit" [text]="isSignup$.value ? 'SIGN UP' : 'SIGN IN'" />
+    </form>
+  </div>
+  <app-auth-social />
+</div>

@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SignupPageRoutingModule } from './signup-page-routing.module';
-import { SignupPageComponent } from './signup-page.component';
+import { AuthFormComponent } from './auth-form.component';
 import { ComponentsModule } from 'src/app/components/components.module';
+
 
 
 @NgModule({
   declarations: [
-    SignupPageComponent
+    AuthFormComponent,
   ],
   imports: [
     CommonModule,
-    SignupPageRoutingModule,
     ComponentsModule,
-  ]
+  ],
+  exports: [
+    AuthFormComponent,
+  ],
 })
-export class SignupPageModule { }
+export class AuthFormModule { }

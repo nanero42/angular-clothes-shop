@@ -1,0 +1,9 @@
+<button
+  class="button"
+  [type]="type"
+  [ngClass]="{'button-primary': category === eButton.primary}"
+  [ngStyle]="computedButtonStyle"
+>
+  <span class="button__text">{{ text }}</span>
+  <app-icon *ngIf="icon" [icon]="icon" />
+</button>

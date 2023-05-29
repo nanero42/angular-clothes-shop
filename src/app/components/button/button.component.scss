@@ -1,0 +1,31 @@
+:host { display: contents; }
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &-primary {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: var(--color-primary);
+    color: var(--color-blocks-text-white);
+    border-radius: 50px;
+    font-weight: 200;
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+  }
+
+  &__text {
+    margin-right: 10px;
+    font-family: "Metropolis";
+    font-weight: 100;
+    font-size: 14px;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
