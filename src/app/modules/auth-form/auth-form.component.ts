@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { EButton, EIcon, EJustifyContent } from 'src/app/enums';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-auth-form',
@@ -13,13 +14,15 @@ export class AuthFormComponent {
   eButton = EButton;
   eJustifyContent = EJustifyContent;
 
-  isSignup$ = new BehaviorSubject(true);
+  constructor(
+    protected userService: UserService,
+  ) {}
 
   click() {
-    if (this.isSignup$.value) {
-      this.isSignup$.next(false);
+    if (this.userService.hasAccount$.value) {
+      this.userService.hasAccount$.next(false);
     } else {
-      this.isSignup$.next(true);
+      this.userService.hasAccount$.next(true);
     }
   }
 }
