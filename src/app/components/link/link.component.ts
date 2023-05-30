@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EIcon } from 'src/app/enums';
 
 @Component({
@@ -12,8 +12,4 @@ export class LinkComponent {
   @Input() text = '';
 
   eIcon = EIcon;
-
-  ngOnChanges(c: SimpleChanges) {
-    console.log(c);
-  }
 }

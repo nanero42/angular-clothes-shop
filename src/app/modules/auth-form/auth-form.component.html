@@ -2,7 +2,7 @@
   <div class="auth__container-title-and-form">
     <h1 class="auth__title">{{ title }}</h1>
     <form class="auth__form">
-      <div *ngIf="userService.hasAccount$.value" class="auth__form-group">
+      <div *ngIf="isSignup" class="auth__form-group">
         <input class="auth__form-control" type="text" name="name" required>
         <label class="auth__form-label" for="name">
           <span class="auth__form-label-text">Name</span>
@@ -20,5 +20,8 @@
       <app-button type="submit" [text]="submitButtonText" />
     </form>
   </div>
-  <app-auth-social [text]="socialAuthText" />
+  <app-auth-social
+    [socialLink]="socialLink"
+    [socialLinkText]="socialAuthText"
+  />
 </div>

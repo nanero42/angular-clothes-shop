@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { AuthSocialComponent } from './auth-social/auth-social.component';
 import { ButtonComponent } from './button/button.component';
 import { IconComponent } from './icon/icon.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { TitleComponent } from './title/title.component';
-import { AuthSocialComponent } from './auth-social/auth-social.component';
 import { LinkComponent } from './link/link.component';
-import { RouterModule } from '@angular/router';
+import { TitleComponent } from './title/title.component';
 
 
 
@@ -15,7 +14,6 @@ import { RouterModule } from '@angular/router';
     TitleComponent,
     IconComponent,
     ButtonComponent,
-    NavbarComponent,
     AuthSocialComponent,
     LinkComponent,
   ],
@@ -27,7 +25,6 @@ import { RouterModule } from '@angular/router';
     TitleComponent,
     IconComponent,
     ButtonComponent,
-    NavbarComponent,
     AuthSocialComponent,
     LinkComponent,
   ],

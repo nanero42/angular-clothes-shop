@@ -1,10 +1,11 @@
 <div class="signup-page">
-  <app-navbar />
   <app-auth-form
     title="Sign Up"
     submitButtonText="SIGN UP"
     [link]="['../signin']"
     linkText="Already have an account?"
     socialAuthText="Or sign up with social account"
+    [socialLink]="['../signin']"
+    [isSignup]="true"
   />
 </div>

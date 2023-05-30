@@ -1,9 +1,7 @@
 <div class="navbar">
-  <div class="navbar__item navbar__left">
-    <button type="button">
-      <app-icon [icon]="eIcon.arrowBack" />
-    </button>
-  </div>
+  <button type="button" class="navbar__item navbar__left" (click)="back()">
+    <app-icon [icon]="eIcon.arrowBack" />
+  </button>
   <div class="navbar__item navbar__center">
     <span *ngIf="false" class="navbar__title">Title</span>
   </div>

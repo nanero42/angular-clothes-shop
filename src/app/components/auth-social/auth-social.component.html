@@ -1,6 +1,6 @@
 <div class="auth-social">
   <div class="auth-social__content">
-    <div class="auth-social__text">{{ text }}</div>
+    <a [routerLink]="socialLink" class="auth-social__text">{{ socialLinkText }}</a>
     <div class="auth-social__icons-list">
       <button class="auth-social__icons-item">
         <app-icon [icon]="eIcon.google"/>

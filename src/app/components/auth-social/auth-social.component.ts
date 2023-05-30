@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EIcon } from 'src/app/enums';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-auth-social',
@@ -9,11 +8,8 @@ import { UserService } from 'src/app/services/user.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthSocialComponent {
-  @Input() text = '';
+  @Input() socialLinkText = '';
+  @Input() socialLink = [''];
 
   eIcon = EIcon;
-
-  constructor(
-    protected userService: UserService,
-  ) {}
 }
