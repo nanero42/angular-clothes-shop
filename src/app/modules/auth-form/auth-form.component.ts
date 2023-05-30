@@ -14,8 +14,10 @@ export class AuthFormComponent {
   @Input() linkText = '';
   @Input() socialAuthText = '';
   @Input() isSignup = false;
-  @Input() showForgotPassword = false;
+  @Input() isSigin = false;
+  @Input() isForgotPasswordPage = false;
   @Input() passwordLinkMargin = '';
+  @Input() additionalMessage = '';
 
   eIcon = EIcon;
   eButton = EButton;

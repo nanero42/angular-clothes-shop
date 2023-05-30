@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ForgotPasswordPageRoutingModule } from './forgot-password-page-routing.module';
 import { ForgotPasswordPageComponent } from './forgot-password-page.component';
+import { AuthFormModule } from 'src/app/modules/auth-form/auth-form.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ForgotPasswordPageComponent } from './forgot-password-page.component';
   ],
   imports: [
     CommonModule,
-    ForgotPasswordPageRoutingModule
+    ForgotPasswordPageRoutingModule,
+    AuthFormModule,
   ]
 })
 export class ForgotPasswordPageModule { }
