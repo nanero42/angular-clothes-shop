@@ -19,6 +19,14 @@
         <input class="auth__form-control" type="password" name="password" required>
         <label class="auth__form-label" for="password">Password</label>
       </div>
+      <div *ngIf="isSignup" class="auth__form-group">
+        <input class="auth__form-control" type="password" name="confirm_password" required>
+        <label class="auth__form-label" for="password">Confirm Password</label>
+      </div>
+      <div *ngIf="isSignup" class="auth__form-checkbox-container">
+        <input name="terms" id="terms" class="auth__form-checkbox" type="checkbox">
+        <label for="terms">I have read and agree to the Terms</label>
+      </div>
       <app-link *ngIf="linkText" [link]="link" [text]="linkText" />
       <app-button type="submit" [text]="submitButtonText" />
       <app-link

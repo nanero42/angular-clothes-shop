@@ -66,6 +66,19 @@
     color: var(--color-blocks-text-black);
   }
 
+  &__form-checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__form-checkbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
   &__title {
     font-size: 34px;
     line-height: 34px;
