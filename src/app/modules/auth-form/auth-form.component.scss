@@ -1,15 +1,14 @@
 :host { display: contents; }
 
 .auth {
-  min-height: 100vh;
-  background-color: var(--color-bg);
-
   &__container {
     min-height: calc(100vh - 44px); // 44px - navbar height
     padding-top: 18px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    width: clamp(330px, 100%, 500px);
+    margin: 0 auto;
   }
 
   &__container-title-and-form {
