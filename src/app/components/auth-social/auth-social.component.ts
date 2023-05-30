@@ -9,7 +9,6 @@ import { EIcon } from 'src/app/enums';
 })
 export class AuthSocialComponent {
   @Input() socialLinkText = '';
-  @Input() socialLink = [''];
 
   eIcon = EIcon;
 }

@@ -9,13 +9,13 @@ import { EButton, EIcon, EJustifyContent } from 'src/app/enums';
 })
 export class AuthFormComponent {
   @Input() title = '';
-  @Input() buttonText = '';
   @Input() submitButtonText = '';
   @Input() link = [''];
   @Input() linkText = '';
   @Input() socialAuthText = '';
-  @Input() socialLink = [''];
   @Input() isSignup = false;
+  @Input() showForgotPassword = false;
+  @Input() passwordLinkMargin = '';
 
   eIcon = EIcon;
   eButton = EButton;

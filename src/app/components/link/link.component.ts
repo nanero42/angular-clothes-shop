@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { EIcon } from 'src/app/enums';
 
 @Component({
@@ -7,9 +7,18 @@ import { EIcon } from 'src/app/enums';
   styleUrls: ['./link.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LinkComponent {
+export class LinkComponent implements OnInit {
   @Input() link = [''];
   @Input() text = '';
+  @Input() margin = '';
+
+  computedStyle = {};
 
   eIcon = EIcon;
+
+  ngOnInit(): void {
+    this.computedStyle = {
+      'margin': this.margin,
+    };
+  }
 }

@@ -18,10 +18,13 @@
       </div>
       <app-link [link]="link" [text]="linkText" />
       <app-button type="submit" [text]="submitButtonText" />
+      <app-link
+        *ngIf="showForgotPassword"
+        [link]="['../forgot_password']"
+        [text]="'Forgot password?'"
+        [margin]="passwordLinkMargin"
+      />
     </form>
   </div>
-  <app-auth-social
-    [socialLink]="socialLink"
-    [socialLinkText]="socialAuthText"
-  />
+  <app-auth-social [socialLinkText]="socialAuthText" />
 </div>
