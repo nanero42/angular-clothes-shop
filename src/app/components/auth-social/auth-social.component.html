@@ -1,6 +1,6 @@
 <div class="auth-social">
   <div class="auth-social__content">
-    <div class="auth-social__text">Or {{ (userService.hasAccount$ | async) ? 'sign in' : 'sign up' }} with social account</div>
+    <div class="auth-social__text">{{ text }}</div>
     <div class="auth-social__icons-list">
       <button class="auth-social__icons-item">
         <app-icon [icon]="eIcon.google"/>

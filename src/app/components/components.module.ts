@@ -5,6 +5,8 @@ import { IconComponent } from './icon/icon.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TitleComponent } from './title/title.component';
 import { AuthSocialComponent } from './auth-social/auth-social.component';
+import { LinkComponent } from './link/link.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,9 +17,11 @@ import { AuthSocialComponent } from './auth-social/auth-social.component';
     ButtonComponent,
     NavbarComponent,
     AuthSocialComponent,
+    LinkComponent,
   ],
   imports: [
     CommonModule,
+    RouterModule,
   ],
   exports: [
     TitleComponent,
@@ -25,6 +29,7 @@ import { AuthSocialComponent } from './auth-social/auth-social.component';
     ButtonComponent,
     NavbarComponent,
     AuthSocialComponent,
+    LinkComponent,
   ],
 })
 export class ComponentsModule { }

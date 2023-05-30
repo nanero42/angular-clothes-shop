@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { EButton, EIcon, EJustifyContent } from 'src/app/enums';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,6 +10,14 @@ import { UserService } from 'src/app/services/user.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthFormComponent {
+  @Input() title = '';
+  @Input() buttonText = '';
+  @Input() submitButtonText = '';
+  // @Input() isSignupPage!: boolean;
+  @Input() link = [''];
+  @Input() linkText = '';
+  @Input() socialAuthText = '';
+
   eIcon = EIcon;
   eButton = EButton;
   eJustifyContent = EJustifyContent;
@@ -17,12 +25,4 @@ export class AuthFormComponent {
   constructor(
     protected userService: UserService,
   ) {}
-
-  click() {
-    if (this.userService.hasAccount$.value) {
-      this.userService.hasAccount$.next(false);
-    } else {
-      this.userService.hasAccount$.next(true);
-    }
-  }
 }

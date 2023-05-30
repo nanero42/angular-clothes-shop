@@ -1,0 +1,13 @@
+:host { display: contents; }
+
+.link {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  &__text {
+    margin-right: 10px;
+  }
+}
