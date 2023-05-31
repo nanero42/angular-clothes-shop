@@ -1,30 +1,64 @@
-<div class="auth__container">
-  <div class="auth__container-title-and-form">
-    <h1 class="auth__title">{{ title }}</h1>
-    <form class="auth__form">
-      <p *ngIf="additionalMessage" class="auth__additional-message">
+<div class="auth">
+  <div class="flex-container">
+    <h1 class="title">{{ title }}</h1>
+    <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <p *ngIf="additionalMessage" class="additional-message">
         {{ additionalMessage }}
       </p>
-      <div *ngIf="isSignup" class="auth__form-group">
-        <input class="auth__form-control" type="text" name="name" required>
-        <label class="auth__form-label" for="name">
-          <span class="auth__form-label-text">Name</span>
-        </label>
+      <!-- name -->
+      <div *ngIf="isSignup" class="form-group">
+        <label class="form-label" for="name">Name</label>
+        <input
+          formControlName="name"
+          class="form-control"
+          [ngClass]="{'invalid': submitted && f['name'].errors}"
+          type="text"
+          name="name"
+        >
       </div>
-      <div class="auth__form-group">
-        <input class="auth__form-control" type="email" name="email" required>
-        <label class="auth__form-label" for="email">E-Mail</label>
+      <!-- email -->
+      <div class="form-group">
+        <label class="form-label" for="email">E-Mail</label>
+        <input
+          formControlName="email"
+          class="form-control"
+          [ngClass]="{'invalid': submitted && f['email'].errors}"
+          type="email"
+          name="email"
+        >
       </div>
-      <div *ngIf="!isForgotPasswordPage" class="auth__form-group">
-        <input class="auth__form-control" type="password" name="password" required>
-        <label class="auth__form-label" for="password">Password</label>
+      <!-- password -->
+      <div *ngIf="!isForgotPasswordPage" class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input
+          formControlName="password"
+          class="form-control"
+          [ngClass]="{'invalid': submitted && f['password'].errors}"
+          type="password"
+          name="password"
+        >
       </div>
-      <div *ngIf="isSignup" class="auth__form-group">
-        <input class="auth__form-control" type="password" name="confirm_password" required>
-        <label class="auth__form-label" for="password">Confirm Password</label>
+      <!-- confirmPassword -->
+      <div *ngIf="isSignup" class="form-group">
+        <label class="form-label" for="password">Confirm Password</label>
+        <input
+          formControlName="confirmPassword"
+          class="form-control"
+          [ngClass]="{'invalid': submitted && f['confirmPassword'].errors}"
+          type="password"
+          name="confirmPassword"
+        >
       </div>
-      <div *ngIf="isSignup" class="auth__form-checkbox-container">
-        <input name="terms" id="terms" class="auth__form-checkbox" type="checkbox">
+      <!-- acceptTerms -->
+      <div *ngIf="isSignup" class="form-checkbox-container">
+        <input
+          formControlName="acceptTerms"
+          name="acceptTerms"
+          id="terms"
+          class="form-checkbox"
+          [ngClass]="{'invalid': submitted && f['acceptTerms'].errors}"
+          type="checkbox"
+        >
         <label for="terms">I have read and agree to the Terms</label>
       </div>
       <app-link *ngIf="linkText" [link]="link" [text]="linkText" />
