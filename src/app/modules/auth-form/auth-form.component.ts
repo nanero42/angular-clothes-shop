@@ -54,13 +54,6 @@ export class AuthFormComponent implements OnInit {
     console.log(JSON.stringify(this.form.value, null, 2));
   }
 
-  onReset() {
-    this.submitted = false;
-    this.form.reset();
-    this.form.markAsPristine();
-    this.form.markAsUntouched();
-  }
-
   isTouched(controlName: string) {
     return this.f[controlName].touched;
   }
