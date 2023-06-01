@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { ErrorService } from 'src/app/services';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-error-page',
@@ -8,5 +7,4 @@ import { ErrorService } from 'src/app/services';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ErrorPageComponent {
-  constructor(protected errorService: ErrorService) {}
 }
