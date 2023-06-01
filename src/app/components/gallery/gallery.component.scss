@@ -1,0 +1,19 @@
+.gallery {
+  padding-top: 50px;
+
+  &__titles {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+
+  &__sub-title {
+    color: #9B9B9B;
+    font-weight: 200;
+    font-size: 14px;
+  }
+}

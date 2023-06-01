@@ -5,6 +5,12 @@
 
 @font-face {
   font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-Black.otf") format("opentype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Metropolis";
   src: url("../fonts/metropolis/Metropolis-Regular.otf") format("opentype");
   font-weight: 400;
 }

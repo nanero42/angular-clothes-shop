@@ -1,5 +1,41 @@
 :host { display: contents; }
 
 .home-page {
-  min-height: calc(100vh - 44px); // 44px navbar height
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  height: 70vh;
+  background-color: #9E9E9E;
+  background-image: url("/assets/images/hero.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    position: absolute;
+    padding-left: 20px;
+    bottom: 0;
+  }
+
+  &__title {
+    font-size: 70px;
+    font-weight: 900;
+    color: #FFF;
+    padding-bottom: 20px;
+  }
+}
+
+.sale__button {
+  background-color: #DB3022;
+  color: #FFF;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: "Metropolis";
+  font-weight: 400;
 }

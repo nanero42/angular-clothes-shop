@@ -8,6 +8,7 @@ import { TitleComponent } from './title/title.component';
 import { LinkComponent } from './link/link.component';
 import { InputComponent } from './input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthSocialComponent,
     LinkComponent,
     InputComponent,
+    GalleryComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthSocialComponent,
     LinkComponent,
     InputComponent,
+    GalleryComponent,
   ],
 })
 export class ComponentsModule { }
