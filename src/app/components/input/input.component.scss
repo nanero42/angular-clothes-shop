@@ -1,0 +1,35 @@
+:host { display: contents; }
+
+.form-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 16px;
+  padding-top: 30px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+
+  &:focus {
+    border: 1px solid #9E9E9E;
+  }
+}
+
+.form-label {
+  position: absolute;
+  z-index: 1;
+  padding-top: 12px;
+  padding-left: 12px;
+  color: var(--color-blocks-text);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.invalid {
+  border: 1px solid red;
+}

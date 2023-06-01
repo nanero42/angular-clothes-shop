@@ -6,6 +6,8 @@ import { ButtonComponent } from './button/button.component';
 import { IconComponent } from './icon/icon.component';
 import { TitleComponent } from './title/title.component';
 import { LinkComponent } from './link/link.component';
+import { InputComponent } from './input/input.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -16,10 +18,12 @@ import { LinkComponent } from './link/link.component';
     ButtonComponent,
     AuthSocialComponent,
     LinkComponent,
+    InputComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
   ],
   exports: [
     TitleComponent,
@@ -27,6 +31,7 @@ import { LinkComponent } from './link/link.component';
     ButtonComponent,
     AuthSocialComponent,
     LinkComponent,
+    InputComponent,
   ],
 })
 export class ComponentsModule { }

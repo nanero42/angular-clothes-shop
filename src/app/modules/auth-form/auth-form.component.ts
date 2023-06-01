@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { AbstractControl, FormGroup } from '@angular/forms';
 import { EButton, EIcon, EJustifyContent } from 'src/app/enums';
+import { ConfirmPasswordFormControl, EmailFormControl, NameFormControl, PasswordFormControl, TermsFormControl } from 'src/app/helpers';
 
 @Component({
   selector: 'app-auth-form',
@@ -8,7 +9,7 @@ import { EButton, EIcon, EJustifyContent } from 'src/app/enums';
   styleUrls: ['./auth-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuthFormComponent {
+export class AuthFormComponent implements OnInit {
   @Input() title = '';
   @Input() submitButtonText = '';
   @Input() link = [''];
@@ -24,21 +25,26 @@ export class AuthFormComponent {
   eButton = EButton;
   eJustifyContent = EJustifyContent;
 
-  form = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(40)]),
-    confirmPassword: new FormControl('', Validators.required),
-    acceptTerms: new FormControl(false, [Validators.required]),
-  });
+  form!: FormGroup;
   submitted = false;
 
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
   }
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    this.form = new FormGroup({
+      name: new NameFormControl(),
+      email: new EmailFormControl(),
+      password: new PasswordFormControl(),
+      confirmPassword: new ConfirmPasswordFormControl(),
+      terms: new TermsFormControl(),
+    });
+  }
+
   onSubmit() {
-    console.log(this.f['password']);
     this.submitted = true;
 
     if (this.form.invalid) {
@@ -51,5 +57,15 @@ export class AuthFormComponent {
   onReset() {
     this.submitted = false;
     this.form.reset();
+    this.form.markAsPristine();
+    this.form.markAsUntouched();
+  }
+
+  isTouched(controlName: string) {
+    return this.f[controlName].touched;
+  }
+
+  isInvalid(controlName: string) {
+    return this.f[controlName].invalid;
   }
 }

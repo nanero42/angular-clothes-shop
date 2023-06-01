@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+  <label class="form-label" [attr.for]="formControlName">{{ label }}</label>
+  <input
+    [formControlName]="formControlName"
+    class="form-control"
+    [ngClass]="{'invalid': invalidCondition && form.controls[formControlName].errors}"
+    type="text"
+    [name]="formControlName"
+  >
+</form>
