@@ -8,7 +8,6 @@ import { tap } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'e-commerce';
   showNavbar = true;
   pages = ['/'];
 
