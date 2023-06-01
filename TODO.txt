@@ -1,7 +1,0 @@
-+ implement input fields validation (error).
-  When user creates password, show in real time hints like password must contain a digit, password must contain uppercase/lowercase etc and hide them if success
-+ signup / signin pages. Implement adaptive design.
-+ Split auth page into two different pages: signup & signin.
-+ return back button should return to the previous page.
-+ Make forgot password page.
-+ If user not authorized, show error page and offer to him / her to go to a signin / signup page
