@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { EIcon } from 'src/app/enums';
+import { IGalleryItem } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-gallery',
@@ -11,6 +12,8 @@ export class GalleryComponent implements OnInit {
   @Input() title = '';
   @Input() subTitle = '';
   @Input() buttonText = '';
+  @Input() galleryItems: IGalleryItem[] = [];
+
   @Input() brand = 'Dorothy Perkins';
   @Input() itemName = 'Evening Dress';
   @Input() currency = '$';
@@ -19,6 +22,8 @@ export class GalleryComponent implements OnInit {
   @Input() discountAmount = 0;
 
   hasDiscount = false;
+  discountPrice = 0;
+  discountLabel = '';
 
   eIcon = EIcon;
 
@@ -28,38 +33,36 @@ export class GalleryComponent implements OnInit {
 
   ngOnInit(): void {
     this.calcDiscount();
+    this.calcDiscountPrice();
+    this.getDiscountText();
   }
 
-  getDiscountPrice(): number {
+  calcDiscountPrice(): void {
     if (!this.price) {
       throw new Error('Error. Price must be above zero');
     }
 
     if (this.discountPercent) {
-      return Math.round(this.price * ((100 - this.discountPercent) / 100));
+      this.discountPrice = Math.round(this.price * ((100 - this.discountPercent) / 100));
     } else if (this.discountAmount) {
 
       if (this.price - this.discountAmount < 0) throw new Error('Error. Discount price cannot be lower zero');
 
-      return Math.round(this.price - this.discountAmount);
+      this.discountPrice = Math.round(this.price - this.discountAmount);
     }
-
-    return this.price;
   }
 
-  getDiscountText(): string {
+  getDiscountText(): void {
     if (this.discountPercent) {
-      return `-${this.discountPercent}%`;
+      this.discountLabel = `-${this.discountPercent}%`;
     } else if (this.discountAmount) {
-      return `-${this.discountAmount}${this.currency}`;
+      this.discountLabel = `-${this.discountAmount}${this.currency}`;
+    } else {
+      this.discountLabel = '';
     }
-
-    return '';
   }
 
   calcDiscount(): void {
-    console.log('discount calced!');
-
     this.hasDiscount = !!(this.discountPercent || this.discountAmount);
   }
 }
