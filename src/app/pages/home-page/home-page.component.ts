@@ -8,7 +8,7 @@ import { IGalleryItem } from 'src/app/interfaces';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent {
-  isSale = false;
+  isSale = true;
 
   galleryItems: IGalleryItem[] = [
     {
