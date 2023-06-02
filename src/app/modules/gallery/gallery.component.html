@@ -8,29 +8,16 @@
       <button class="gallery__button">{{ buttonText }}</button>
     </div>
     <ul class="gallery__list">
-      <li class="gallery__item">
-        <div class="gallery__img-container">
-          <span *ngIf="hasDiscount" class="gallery__bubble-discount">{{ discountLabel }}</span>
-          <img [ngStyle]="style" alt="" class="gallery__img">
-          <button class="gallery__favorite">
-            <app-icon [icon]="eIcon.favorite" />
-          </button>
-        </div>
-        <div class="gallery__stars">
-          <app-icon [icon]="eIcon.star" />
-          <app-icon [icon]="eIcon.star" />
-          <app-icon [icon]="eIcon.star" />
-          <app-icon [icon]="eIcon.star" />
-          <app-icon [icon]="eIcon.star" />
-          <span class="gallery__stars-count">(5)</span>
-        </div>
-        <span class="gallery__brand">{{ brand }}</span>
-        <span class="gallery__item-name">{{ itemName }}</span>
-        <div class="gallery__prices">
-          <span class="gallery__price" [ngClass]="{'gallery__old-price': hasDiscount}">{{ price + currency }}</span>
-          <span *ngIf="hasDiscount" class="gallery__discount-price">{{ discountPrice + currency }}</span>
-        </div>
-      </li>
+      <app-gallery-item
+        *ngFor="let item of galleryItems"
+        [brand]="item.brand"
+        [itemName]="item.itemName"
+        [currency]="item.currency"
+        [price]="item.price"
+        [discountAmount]="item.discountAmount"
+        [discountPercent]="item.discountPercent"
+        [image]="item.image"
+      />
     </ul>
   </div>
 </div>
