@@ -7,4 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent {
+  galleryItem = [
+    {
+      id: 0,
+
+    }
+  ]
 }
