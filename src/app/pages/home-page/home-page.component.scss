@@ -6,6 +6,7 @@
 
 .hero {
   position: relative;
+  margin-bottom: 20px;
   height: 70vh;
   background-color: #9E9E9E;
   background-image: url("/assets/images/hero.jpeg");
@@ -20,7 +21,7 @@
   }
 
   &__title {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 900;
     color: #FFF;
     padding-bottom: 20px;

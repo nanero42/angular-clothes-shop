@@ -1,5 +1,5 @@
 .gallery {
-  padding-top: 50px;
+  padding-bottom: 50px;
 
   &__titles {
     display: flex;
@@ -18,10 +18,8 @@
   }
 
   &__list {
-    padding-top: 40px;
+    padding-top: 26px;
     overflow-y: auto;
     display: flex;
   }
-
-
 }
