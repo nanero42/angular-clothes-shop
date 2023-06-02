@@ -4,7 +4,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthSocialComponent } from './auth-social/auth-social.component';
 import { ButtonComponent } from './button/button.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { IconComponent } from './icon/icon.component';
 import { InputComponent } from './input/input.component';
 import { LinkComponent } from './link/link.component';
@@ -20,7 +19,6 @@ import { TitleComponent } from './title/title.component';
     AuthSocialComponent,
     LinkComponent,
     InputComponent,
-    GalleryComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +32,6 @@ import { TitleComponent } from './title/title.component';
     AuthSocialComponent,
     LinkComponent,
     InputComponent,
-    GalleryComponent,
   ],
 })
 export class ComponentsModule { }
