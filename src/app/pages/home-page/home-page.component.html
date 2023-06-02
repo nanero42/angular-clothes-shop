@@ -6,7 +6,7 @@
     </div>
   </div>
   <app-gallery
-    *ngIf="isSale"
+    *ngIf="showSectionSale"
     title="Sale"
     subTitle="Super summer sale"
     buttonText="View all"
@@ -18,10 +18,10 @@
     </div>
   </div>
   <app-gallery
-    *ngIf="isSale"
+    *ngIf="showSectionNew"
     title="New"
     subTitle="You've never seen it before!"
     buttonText="View all"
-    [galleryItems]="galleryItems"
+    [galleryItems]="galleryItemsNew"
   />
 </div>

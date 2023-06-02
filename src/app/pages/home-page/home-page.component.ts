@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IGalleryItem } from 'src/app/interfaces';
+import { IGalleryItem, IGalleryItemNew } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-home-page',
@@ -8,7 +8,8 @@ import { IGalleryItem } from 'src/app/interfaces';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePageComponent {
-  isSale = true;
+  showSectionSale = true;
+  showSectionNew = true;
 
   galleryItems: IGalleryItem[] = [
     {
@@ -48,6 +49,49 @@ export class HomePageComponent {
       currency: '$',
       price: 1500,
       discountPercent: 30,
+      discountAmount: 0,
+      image: '/assets/images/hero.jpeg',
+    },
+  ];
+
+  galleryItemsNew: IGalleryItemNew[] = [
+    {
+      id: 0,
+      brand: 'Dorothy Perkins',
+      itemName: 'Evening Dress',
+      currency: '$',
+      price: 15,
+      discountPercent: 0,
+      discountAmount: 0,
+      image: '/assets/images/hero.jpeg',
+    },
+    {
+      id: 1,
+      brand: 'brand 1',
+      itemName: 'item name 1',
+      currency: '$',
+      price: 150,
+      discountPercent: 0,
+      discountAmount: 0,
+      image: '/assets/images/hero.jpeg',
+    },
+    {
+      id: 2,
+      brand: 'brand 2',
+      itemName: 'item name 2',
+      currency: '$',
+      price: 1200,
+      discountPercent: 0,
+      discountAmount: 0,
+      image: '/assets/images/hero.jpeg',
+    },
+    {
+      id: 3,
+      brand: 'brand 3',
+      itemName: 'item name 3',
+      currency: '$',
+      price: 1500,
+      discountPercent: 0,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
     },

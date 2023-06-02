@@ -15,6 +15,7 @@ export class GalleryItemComponent implements OnInit {
   @Input() discountPercent = 20;
   @Input() discountAmount = 0;
   @Input() image = '';
+  @Input() isNew = true;
 
   hasDiscount = false;
   discountPrice = 0;
