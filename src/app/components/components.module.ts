@@ -8,6 +8,7 @@ import { IconComponent } from './icon/icon.component';
 import { InputComponent } from './input/input.component';
 import { LinkComponent } from './link/link.component';
 import { TitleComponent } from './title/title.component';
+import { CollectionComponent } from './collection/collection.component';
 
 
 
@@ -19,6 +20,7 @@ import { TitleComponent } from './title/title.component';
     AuthSocialComponent,
     LinkComponent,
     InputComponent,
+    CollectionComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { TitleComponent } from './title/title.component';
     AuthSocialComponent,
     LinkComponent,
     InputComponent,
+    CollectionComponent,
   ],
 })
 export class ComponentsModule { }

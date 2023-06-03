@@ -62,8 +62,6 @@ export class GalleryItemComponent implements OnInit {
   }
 
   calcStyle(): void {
-    console.log(this.image);
-
     this.style = {
       'background-image': `url(${this.image})`,
     };

@@ -10,3 +10,43 @@
 .jcc {
   justify-content: center;
 }
+
+.dfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// img
+
+.cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// overflow
+
+.overflow-h {
+  overflow: hidden;
+}
+
+// width
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+// height
+
+.h-50 {
+  height: 50%;
+}
+
+.h-100 {
+  height: 100%;
+}
