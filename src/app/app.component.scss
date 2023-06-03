@@ -2,8 +2,22 @@
 
 * {
   font-family: "Metropolis";
+  font-weight: 400;
   font-size: 20px;
   font-weight: 700;
+}
+
+.app {
+  padding-bottom: 70px;
+}
+
+.navbar-layer {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
 }
 
 .app {

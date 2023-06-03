@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuModule } from './modules/menu/menu.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarModule } from './modules/navbar/navbar.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     MenuModule,
     ReactiveFormsModule,
+    NavbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
