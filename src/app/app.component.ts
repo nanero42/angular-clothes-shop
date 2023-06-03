@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   showMenu = true;
   showNavbar = false;
 
-  showMenuOnPages = ['/'];
+  hideMenuOnPages = ['/'];
   showNavbarOnPages = ['/'];
 
   appStyle: any = {};
@@ -36,13 +36,13 @@ export class AppComponent implements OnInit {
   }
 
   showHideMenu(url: string): void {
-    this.showMenuOnPages.some((path) => path === url)
+    this.hideMenuOnPages.some((path) => path === url)
       ? this.showMenu = false
       : this.showMenu = true;
   }
 
   showHideNavbar(url: string): void {
-    if (this.showMenuOnPages.some((path) => path === url)) {
+    if (this.showNavbarOnPages.some((path) => path === url)) {
       this.showNavbar = true;
       this.appStyle['padding-bottom'] = '70px';
     } else {
