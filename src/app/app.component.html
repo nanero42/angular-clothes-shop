@@ -1,7 +1,7 @@
-<div class="app">
-  <div class="navbar-layer">
+<div class="app" [ngStyle]="appStyle">
+  <div *ngIf="showNavbar" class="navbar-layer">
     <app-navbar />
   </div>
-  <app-menu *ngIf="showNavbar" />
+  <app-menu *ngIf="showMenu" />
   <router-outlet />
 </div>

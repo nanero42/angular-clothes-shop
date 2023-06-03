@@ -8,24 +8,46 @@ import { tap } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  showNavbar = true;
-  pages = ['/'];
+  showMenu = true;
+  showNavbar = false;
+
+  showMenuOnPages = ['/'];
+  showNavbarOnPages = ['/'];
+
+  appStyle: any = {};
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.hideShowNavbar$().subscribe();
+    this.watchURLChanges$().subscribe();
   }
 
-  hideShowNavbar$() {
+  watchURLChanges$() {
     return this.router.events.pipe(
       tap((route) => {
         if (route instanceof NavigationEnd) {
-          this.pages.some((url) => url === route.url)
-            ? this.showNavbar = false
-            : this.showNavbar = true;
+          const { url } = route;
+
+          this.showHideMenu(url);
+          this.showHideNavbar(url);
         }
       })
     );
+  }
+
+  showHideMenu(url: string): void {
+    this.showMenuOnPages.some((path) => path === url)
+      ? this.showMenu = false
+      : this.showMenu = true;
+  }
+
+  showHideNavbar(url: string): void {
+    if (this.showMenuOnPages.some((path) => path === url)) {
+      this.showNavbar = true;
+      this.appStyle['padding-bottom'] = '70px';
+    } else {
+      this.showNavbar = false;
+      this.appStyle['padding-bottom'] = '';
+    }
   }
 }
