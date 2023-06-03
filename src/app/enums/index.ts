@@ -7,6 +7,10 @@ export enum EIcon {
   facebook = 'facebook',
   star = 'star',
   favorite = 'favorite',
+  home = 'home',
+  shop = 'shop',
+  bag = 'bag',
+  profile = 'profile',
 }
 
 export enum EButton {
