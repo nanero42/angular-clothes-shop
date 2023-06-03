@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { IGalleryItem, IGalleryItemNew } from 'src/app/interfaces';
+import { IGalleryItem } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-home-page',
@@ -21,6 +21,7 @@ export class HomePageComponent {
       discountPercent: 20,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
+      isNew: true,
     },
     {
       id: 1,
@@ -31,6 +32,7 @@ export class HomePageComponent {
       discountPercent: 35,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
+      isNew: false,
     },
     {
       id: 2,
@@ -41,6 +43,7 @@ export class HomePageComponent {
       discountPercent: 0,
       discountAmount: 150,
       image: '/assets/images/hero.jpeg',
+      isNew: false,
     },
     {
       id: 3,
@@ -51,10 +54,11 @@ export class HomePageComponent {
       discountPercent: 30,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
+      isNew: false,
     },
   ];
 
-  galleryItemsNew: IGalleryItemNew[] = [
+  galleryItemsNew: IGalleryItem[] = [
     {
       id: 0,
       brand: 'Dorothy Perkins',
@@ -64,6 +68,7 @@ export class HomePageComponent {
       discountPercent: 0,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
+      isNew: true,
     },
     {
       id: 1,
@@ -74,6 +79,7 @@ export class HomePageComponent {
       discountPercent: 0,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
+      isNew: true
     },
     {
       id: 2,
@@ -84,6 +90,7 @@ export class HomePageComponent {
       discountPercent: 0,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
+      isNew: true
     },
     {
       id: 3,
@@ -94,6 +101,7 @@ export class HomePageComponent {
       discountPercent: 0,
       discountAmount: 0,
       image: '/assets/images/hero.jpeg',
+      isNew: true
     },
   ];
 }
