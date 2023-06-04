@@ -4,7 +4,7 @@
       <span *ngIf="hasDiscount" class="gallery__bubble-discount">{{ discountLabel }}</span>
       <span *ngIf="isNew" class="gallery__bubble-new">NEW</span>
     </div>
-    <img [ngStyle]="style" alt="" class="gallery__img">
+    <div [ngStyle]="style" class="gallery__img"></div>
     <button class="gallery__favorite">
       <app-icon [icon]="eIcon.favorite" />
     </button>

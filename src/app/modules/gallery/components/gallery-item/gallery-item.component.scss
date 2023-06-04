@@ -1,7 +1,9 @@
+:host { display: contents; }
+
 .gallery {
 
   &__item {
-    margin-right: 26px;
+    width: 200px;
     display: flex;
     flex-direction: column;
   }
@@ -100,7 +102,7 @@
     position: absolute;
     transform: translateY(+40%);
     bottom: 0;
-    right: 10px;
+    right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
