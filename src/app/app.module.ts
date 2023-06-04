@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MenuModule } from './modules/menu/menu.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarModule } from './modules/navbar/navbar.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NavbarModule } from './modules/navbar/navbar.module';
     MenuModule,
     ReactiveFormsModule,
     NavbarModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
